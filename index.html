@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musics  Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="image/logo.svg" class="logo">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">SPECIFICATION</a></li>
+                <li><a href="">PRODUCT</a></li>
+                <li><a href="">CONTACTS</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>The <br>Real <br> sound</h1>
+            </div>
+            <div class="right-col">
+                <p>click hare to listen</p>
+                <img src="pause.png" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="gana/sexy-chillout-hip-hop-track-come-with-me-133764.mp3"type="audio/mp3">
+    </audio>
+    <script>
+        var mySong = document.getElementById("mySong")
+        var icon = document.getElementById("icon") 
+        icon.onclick=function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="play.png";
+            }else{
+                mySong.pause();
+                icon.src="pause.png";
+            }
+        }       
+
+    </script>
+</body>
+</html>
